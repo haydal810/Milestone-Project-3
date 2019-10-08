@@ -15,7 +15,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_river_names")
 def get_river_names():
-    return render_template("home.html", rivers=mongo.db.river_names.find())
+    return render_template("rivers.html", rivers=mongo.db.river_names.find())
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
