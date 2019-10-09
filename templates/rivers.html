@@ -1,19 +1,4 @@
 {% extends 'base.html' %}
-
-
-<div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
-        Select a River
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-    </div>
-</div>
-
-
 {% block content %}
 {% for river in rivers %}
 {{river.river_name}}
@@ -22,5 +7,27 @@
 {{river.free_or_permit}}
 {{river.angling_methods}}
 {% endfor %}
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-5">
+            <div class="dropdown">
+                <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select a River
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
 
 {% endblock %}
