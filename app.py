@@ -18,7 +18,7 @@ def get_river_names():
     return render_template("rivers.html", rivers=mongo.db.river_names.find())
 
 if __name__ == '__main__':
-    app.run(host=os.environ.get('IP'),
-            port=int(os.environ.get('PORT')),
-            debug=True)
+    app.run(host=os.getenv('IP'), 
+    port=int(os.getenv('PORT')), 
+    debug=True)
 
