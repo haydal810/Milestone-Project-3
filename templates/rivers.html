@@ -1,10 +1,25 @@
 {% extends 'base.html' %}
-{% block content %}
+    {% block content %}
         {% for river in rivers %}
-            {{river.river_name}}
-            {{river.status}}
-            {{river.fish}}
-            {{river.free_or_permit}}
-            {{river.angling_methods}}
+        {{river.river_name}}
+        {{river.status}}
+        {{river.fish}}
+        {{river.free_or_permit}}
+        {{river.angling_methods}}
         {% endfor %}
+
+<div class="dropdown">
+    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Dropdown button
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">River 1</a>
+        <a class="dropdown-item" href="#">River 2</a>
+        <a class="dropdown-item" href="#">River 3</a>
+    </div>
+</div>
+
+
+
 {% endblock %}
