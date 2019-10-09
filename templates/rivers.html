@@ -1,9 +1,5 @@
-<html>
-    <head>  
-
-
-    </head>
-    <body>
+{% extends 'base.html' %}
+{% block content %}
         {% for river in rivers %}
             {{river.river_name}}
             {{river.status}}
@@ -11,6 +7,4 @@
             {{river.free_or_permit}}
             {{river.angling_methods}}
         {% endfor %}
-    </body>
-
-</html>
+{% endblock %}
