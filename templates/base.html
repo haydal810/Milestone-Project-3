@@ -9,7 +9,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
         integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="static\style.css" type="text/css" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
     <title>base.html</title>
 </head>
 
@@ -30,9 +30,11 @@
             </div>
         </div>
     </nav>
+    <div class="container-fluid bg">
+    </div>
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-10">
+            <div class="col-10 text-dark welcome-text">
                 <h1>Welcome to the Angling Rivers of County Kerry, Ireland</h1>
                 <p>Begin planning your next fishing trip here.</p>
 
