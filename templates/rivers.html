@@ -17,9 +17,9 @@
                     Select a River
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    {% block content %}
+                    <a class="dropdown-item" href="#">{{river.river_name}}</a>
+                    {% endfor %}
                 </div>
             </div>
         </div>

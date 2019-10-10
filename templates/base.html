@@ -15,32 +15,31 @@
 
 <body>
     <!-- Navbar for each page -->
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <a class="navbar-brand" href="#">The Rivers of County Kerry</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Features</a>
-                <a class="nav-item nav-link" href="#">Pricing</a>
-                <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="#">Edit River Details</a>
+                <a class="nav-item nav-link" href="#">Add a new River</a>
+                <a class="nav-item nav-link" href="#">Leave a Review</a>
             </div>
         </div>
     </nav>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                    <h1>Welcome to the Angling Rivers of County Kerry, Ireland</h1>
-                    <p>Begin planning your next fishing trip here.</p>
-                    {% block content %}
-                    {% endblock %}
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <h1>Welcome to the Angling Rivers of County Kerry, Ireland</h1>
+                <p>Begin planning your next fishing trip here.</p>
+                {% block content %}
+                {% endblock %}
             </div>
         </div>
     </div>
-    
+
 
 
 
