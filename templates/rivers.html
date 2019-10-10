@@ -6,11 +6,11 @@
     <div class="row justify-content-center">
         <div class="col-12 col-md-5">
             <div class="dropdown">
-                <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton"
+                <button class="btn btn-success dropdown-toggle button-text" type="button" id="dropdownMenuButton"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Select a River
                 </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown-menu button-text" aria-labelledby="dropdownMenuButton">
                     {% for river in rivers %}
                     <a class="dropdown-item" href="#">{{river.river_name}}</a>
                     {% endfor %}

@@ -7,7 +7,7 @@ body {
     background-size: cover;
     height: 100vh;
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     width: 100%;
     opacity: 0.5;
     z-index: -1;
@@ -17,4 +17,16 @@ body {
     z-index: 1;
     position: relative;
     margin-top: 50px;
+    font-family: 'Amatic SC', cursive, sans-serif;
+}
+.welcome-text p {
+    font-size: 20px;
+}
+
+.button-text {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dropdown {
+    margin-top: 25px;
 }
