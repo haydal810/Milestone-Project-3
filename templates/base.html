@@ -16,13 +16,14 @@
 <body>
     <!-- Navbar for each page -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">The Rivers of County Kerry</a>
+        <a class="navbar-brand" href="#"><i class="fas fa-fish"></i> The Rivers of County Kerry</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="#">Top 3 Rivers</a>
                 <a class="nav-item nav-link" href="#">Edit River Details</a>
                 <a class="nav-item nav-link" href="#">Add a new River</a>
                 <a class="nav-item nav-link" href="#">Leave a Review</a>
@@ -34,8 +35,10 @@
             <div class="col-10">
                 <h1>Welcome to the Angling Rivers of County Kerry, Ireland</h1>
                 <p>Begin planning your next fishing trip here.</p>
+
                 {% block content %}
                 {% endblock %}
+
             </div>
         </div>
     </div>

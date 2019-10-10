@@ -1,12 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-{% for river in rivers %}
-{{river.river_name}}
-{{river.status}}
-{{river.fish}}
-{{river.free_or_permit}}
-{{river.angling_methods}}
-{% endfor %}
+
 
 <div class="container-fluid">
     <div class="row justify-content-center">
@@ -17,7 +11,7 @@
                     Select a River
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    {% block content %}
+                    {% for river in rivers %}
                     <a class="dropdown-item" href="#">{{river.river_name}}</a>
                     {% endfor %}
                 </div>
