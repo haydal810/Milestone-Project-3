@@ -10,33 +10,36 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
         integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
     <title>base.html</title>
 </head>
 
 <body>
-    <!-- Navbar for each page -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="#"><i class="fas fa-fish"></i> Rivers of County Kerry</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link" href="#">Top 3 Rivers</a>
-                <a class="nav-item nav-link" href="#">Edit River Details</a>
-                <a class="nav-item nav-link" href="#">Add a new River</a>
-                <a class="nav-item nav-link" href="#">Leave a Review</a>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <a class="navbar-brand" href="{{url_for('get_river_names')}}"><i class="fas fa-fish"></i> Rivers of County Kerry</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link" href="#">Top 3 Rivers</a>
+                    <a class="nav-item nav-link" href="{{url_for('edit_river')}}">Edit River Details</a>
+                    <a class="nav-item nav-link" href="#">Add a new River</a>
+                    <a class="nav-item nav-link" href="#">Leave a Review</a>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
+    <!-- Navbar for each page -->
+
     <div class="container-fluid bg">
     </div>
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12">
-                
+
                 {% block content %}
                 {% endblock %}
 

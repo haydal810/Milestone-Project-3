@@ -21,7 +21,7 @@ def get_river_names():
 ## This is the function for the edit river page:
 @app.route("/")
 @app.route("/edit_river")
-def edir_river():
+def edit_river():
     return render_template("edit_river.html", rivers=mongo.db.river_names.find())
 
 
