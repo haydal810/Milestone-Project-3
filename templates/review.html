@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="container-fluid">
+    <!–– Welcome Landing text -->
+        <div class="row justify-content-center">
+            <div class="col-10 text-dark welcome-text">
+                <h1><strong>Welcome to the Angling Rivers of County Kerry, Ireland</strong></h1>
+                <p><strong>Want to provide feedback on a river?<br>Leave a review here.</strong></p>
+            </div>
+        </div>
+        <!–– Dropdown for River to select for edit -->
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="dropdown">
+                        <button class="btn btn-warning dropdown-toggle button-text" type="button"
+                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select a River
+                        </button>
+                        <div class="dropdown-menu button-text" aria-labelledby="dropdownMenuButton">
+                            {% for river in rivers %}
+                            <a class="dropdown-item" href="#">{{river.river_name}}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5">
+                    <!–– Review fields goes here -->
+                        <form class="margintop25 form_font">
+                            <div class="form-group font-weight-bolder">
+                                <label for="exampleFormControlTextarea1">Leave your review here: </label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" placeholder="Say something nice, will ya?"></textarea>
+                            </div>
+                        </form>
+                </div>
+            </div>
+</div>
+
+
+
+
+
+{% endblock %}
