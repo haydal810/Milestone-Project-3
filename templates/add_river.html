@@ -7,27 +7,18 @@
         <div class="row justify-content-center">
             <div class="col-10 text-dark welcome-text">
                 <h1><strong>Welcome to the Angling Rivers of County Kerry, Ireland</strong></h1>
-                <p><strong>Something incorrect in our database?<br>Edit a River's details here.</strong></p>
+                <p><strong>Want to add a new river to our database?<br>Add a new River's details here.</strong></p>
             </div>
         </div>
         <!–– Dropdown for River to select for edit -->
             <div class="row justify-content-center">
-                <div class="col-12">
-                    <div class="dropdown">
-                        <button class="btn btn-warning dropdown-toggle button-text" type="button"
-                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Select a River
-                        </button>
-                        <div class="dropdown-menu button-text" aria-labelledby="dropdownMenuButton">
-                            {% for river in rivers %}
-                            <a class="dropdown-item" href="#">{{river.river_name}}</a>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
                 <div class="col-12 col-md-5">
                     <!–– Form fields goes here -->
                         <form class="margintop25 form_font">
+                            <div class="form-group font-weight-bolder">
+                                <label for="exampleFormControlTextarea1">River Name: </label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                            </div>
                             <div class="form-group font-weight-bolder">
                                 <label for="exampleFormControlTextarea1">River Status: (Open or Closed)</label>
                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
@@ -42,7 +33,7 @@
                             </div>
                             <div class="form-group font-weight-bolder">
                                 <label for="exampleFormControlTextarea1">Allowable angling methods: </label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
                             </div>
                         </form>
                 </div>

@@ -24,11 +24,22 @@ def get_river_names():
 def edit_river():
     return render_template("edit_river.html", rivers=mongo.db.river_names.find())
 
+
+
 ## This is the function for the review page:
 @app.route("/")
 @app.route("/review_river")
 def review_river():
     return render_template("review.html", rivers=mongo.db.river_names.find())
+
+
+
+## This is the function for the review page:
+@app.route("/")
+@app.route("/add_new_river")
+def add_new_river():
+    return render_template("add_river.html")
+
 
 
 
