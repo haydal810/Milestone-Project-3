@@ -13,6 +13,11 @@ body {
     z-index: -1;
 }
 
+.home-logo-text {
+    font-family: 'Amatic SC', cursive, sans-serif;
+    font-size: 30px;
+}
+
 .welcome-text {
     z-index: 1;
     position: relative;
