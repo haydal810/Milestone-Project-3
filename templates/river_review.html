@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="container-fluid">
+    <!–– Welcome Landing text -->
+        <div class="row justify-content-center">
+            <div class="col-10 text-dark welcome-text">
+                <p><strong>Read Reviews <br> from other users<br>here.</strong></p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <!–– Dropdown for River to select for edit -->
+                <div class="col-12 col-md-5">
+                    <form class="margintop25 form_font">
+                        <select id="river_name" name="river_name" class="form-control" required>
+                            <option value="" disabled selected>Select River</option>
+                            {% for river in rivers %}
+                            <option value="{{river.river_name}}">{{river.river_name}}</option>
+                            {% endfor %}
+                        </select>
+                    </form>
+                </div>
+        </div>
+</div>
+
+
+
+
+
+{% endblock %}

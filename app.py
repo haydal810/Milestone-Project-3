@@ -28,11 +28,19 @@ def edit_river():
 
 
 
-## This is the function for the review page:
+## This is the function for the leave a review page:
 
 @app.route("/review_river")
 def review_river():
     return render_template("review.html", rivers=mongo.db.river_names.find())
+
+
+## This is the function for the river_review page:
+
+@app.route("/river_review")
+def river_review():
+    return render_template("river_review.html", rivers=mongo.db.river_names.find())
+
 
 
 
@@ -43,6 +51,7 @@ def add_new_river():
     return render_template("add_river.html", rivers=mongo.db.river_names.find())
 
 
+## This function adds the form data to the database:
 
 @app.route("/insert_river", methods=['POST'])
 def insert_river():
