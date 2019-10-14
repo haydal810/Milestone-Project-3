@@ -9,8 +9,8 @@
                 <p><strong>Want to provide feedback <br> on a river ?<br>Leave your review here.</strong></p>
             </div>
         </div>
-        <!–– Dropdown for River to select for edit -->
-            <div class="row justify-content-center">
+        <div class="row justify-content-center">
+            <!–– Dropdown for River to select for edit -->
                 <div class="col-12">
                     <div class="dropdown">
                         <button class="btn btn-warning dropdown-toggle button-text" type="button"
@@ -24,18 +24,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-10">
-                    <!–– Review fields goes here -->
+                <!–– Review fields here -->
+                    <div class="col-10">
                         <form class="margintop25 form_font">
                             <div class="form-group font-weight-bolder">
-                                <label for="exampleFormControlTextarea1">Leave your review here: </label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"
+                                <label for="exampleFormControlTextarea1"><i class="far fa-comment-dots"></i> Leave your
+                                    review here: </label>
+                                <textarea class="form-control" name="reviews" id="reviews" rows="8"
                                     placeholder="Say something nice, will ya?"></textarea>
                             </div>
                             <button type="submit" class="btn btn-success">Submit my Review</button>
                         </form>
-                </div>
-            </div>
+                    </div>
+                    <!–– Upvote Option here -->
+                        <div class="col-10 welcome-text">
+                            <h3><strong>Would you recommend this river for fishing?</strong></h3>
+                            <p>Submit vote here:</p>
+                            <button type="button" class="btn btn-primary"><i class="far fa-thumbs-up"></i></button>
+                        </div>
+        </div>
 </div>
 
 
