@@ -16,8 +16,7 @@
                 <div class="col-8 col-md-5">
                     <form action="" method="POST" class="margintop25 form_font">
                         <select id="river_name" name="river_name" class="form-control">
-                            <option selected>Select River</option>
-                            <option value="" disabled selected>Choose River</option>
+                            <option value="" disabled selected>Select River</option>
                             {% for river in rivers %}
                             <option value="{{river.river_name}}">{{river.river_name}}</option>
                             {% endfor %}

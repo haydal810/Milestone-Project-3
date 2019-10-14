@@ -14,7 +14,7 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-md-5">
                     <!–– Form fields goes here -->
-                        <form action="" method="POST" class="margintop25 form_font">
+                        <form action="{{url_for('insert_river')}}" method="POST" class="margintop25 form_font">
                             <div class="form-group font-weight-bolder">
                                 <label for="exampleFormControlTextarea1">River Name: </label>
                                 <textarea class="form-control" id="river_name" name="river_name" rows="1"></textarea>
@@ -29,13 +29,16 @@
                             </div>
                             <div class="form-group font-weight-bolder">
                                 <label for="exampleFormControlTextarea1">Free or permit required: </label>
-                                <textarea class="form-control" id="free_or_permit" name="free_or_permit" rows="1"></textarea>
+                                <textarea class="form-control" id="free_or_permit" name="free_or_permit"
+                                    rows="1"></textarea>
                             </div>
                             <div class="form-group font-weight-bolder">
                                 <label for="exampleFormControlTextarea1">Allowable angling methods: </label>
-                                <textarea class="form-control" id="angling_methods" name="angling_methods" rows="2"></textarea>
+                                <textarea class="form-control" id="angling_methods" name="angling_methods"
+                                    rows="2"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-success">Submit</button>
+                            <!–– Send button -->
+                                <button type="submit" class="btn btn-success">Submit</button>
                         </form>
                 </div>
             </div>
