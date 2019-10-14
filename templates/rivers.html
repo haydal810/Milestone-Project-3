@@ -10,28 +10,28 @@
                 <p><strong>Begin planning your next fishing trip here.</strong></p>
             </div>
         </div>
-        <!–– River database dropdown search -->
-            <div class="row justify-content-center">
-                <div class="col-12">
-                    <div class="margintop25">
-                        <button class="btn btn-success dropdown-toggle button-text" type="button"
-                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Select a River
-                        </button>
-                        <div class="dropdown-menu button-text" aria-labelledby="dropdownMenuButton">
+
+        <div class="row justify-content-center">
+            <!–– River database dropdown search -->
+                <div class="col-8 col-md-5">
+                    <form action="" method="POST" class="margintop25 form_font">
+                        <select id="river_name" name="river_name" class="form-control">
+                            <option selected>Select River</option>
+                            <option value="" disabled selected>Choose River</option>
                             {% for river in rivers %}
-                            <a class="dropdown-item" href="#">{{river.river_name}}</a>
+                            <option value="{{river.river_name}}">{{river.river_name}}</option>
                             {% endfor %}
-                        </div>
-                    </div>
+                        </select>
+                    </form>
+                </div>
+        </div>
+
+        <!–– River database results -->
+            <div class="row justify-content-center margintop25">
+                <div class="col-12">
+                    <p>RESULTS HERE</p>
                 </div>
             </div>
-            <!–– River database results -->
-                <div class="row justify-content-center margintop25">
-                    <div class="col-12">
-                        <p>RESULTS HERE</p>
-                    </div>
-                </div>
 </div>
 
 

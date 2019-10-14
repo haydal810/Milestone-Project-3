@@ -18,6 +18,8 @@ mongo = PyMongo(app)
 def get_river_names():
     return render_template("rivers.html", rivers=mongo.db.river_names.find())
 
+
+
 ## This is the function for the edit river page:
 @app.route("/")
 @app.route("/edit_river")
@@ -34,11 +36,11 @@ def review_river():
 
 
 
-## This is the function for the review page:
+## This is the function for the add_river page:
 @app.route("/")
 @app.route("/add_new_river")
 def add_new_river():
-    return render_template("add_river.html")
+    return render_template("add_river.html", rivers=mongo.db.river_names.find())
 
 
 
