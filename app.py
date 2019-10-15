@@ -20,12 +20,6 @@ def get_river_info():
     return render_template("home.html", rivers=mongo.db.river_names.find())
 
 
-# This is the function for the add_river page:
-
-@app.route("/add_new_river")
-def add_new_river():
-    return render_template("add_river.html")
-
 # This function adds the form data, on the add_river page, to the database:
 
 
