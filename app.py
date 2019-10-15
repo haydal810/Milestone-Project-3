@@ -35,7 +35,7 @@ def add_new_river():
 def insert_river():
     rivers = mongo.db.river_names
     rivers.insert_one(request.form.to_dict())
-    return redirect(url_for('get_river_names'))
+    return redirect(url_for('get_river_info'))
 
 
 
