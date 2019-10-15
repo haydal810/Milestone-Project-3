@@ -61,17 +61,6 @@ def read_review():
     return render_template("read_review.html", rivers=mongo.db.river_names.find_one())
 
 
-
-
-
-
-
-
-
-
-
-
-
 if __name__ == '__main__':
     app.run(host=os.getenv('IP'), 
     port=int(os.getenv('PORT')), 
