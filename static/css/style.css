@@ -18,6 +18,12 @@ body {
     font-size: 30px;
 }
 
+.navbar-brand {
+    font-size: 30px;
+}
+
+
+
 .welcome-text {
     z-index: 1;
     position: relative;

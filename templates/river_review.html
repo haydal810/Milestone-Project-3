@@ -9,25 +9,19 @@
                 <p><strong>Read Reviews <br> from other users<br>here.</strong></p>
             </div>
         </div>
-        <div class="row justify-content-center">
-            <!–– Dropdown for River to select for edit -->
-                <div class="col-12 col-md-5">
-                    <form class="margintop25 form_font">
-                        <select id="river_name" name="river_name" class="form-control" required>
-                            <option value="" disabled selected>Select River</option>
-                            {% for river in rivers %}
-                            <option value="{{river.river_name}}">{{river.river_name}}</option>
-                            {% endfor %}
-                        </select>
-                    </form>
+        <!–– River Reviews -->
+
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    {% for river in rivers %}
+                    {{river.river_name}}
                 </div>
-        </div>
-        <div class="col-12">
-            <!–– River database results -->
-                <div class="row justify-content-center margintop25">
-                    <p>RESULTS HERE <br>of selected river from above</p>
+                <div class="col-6">
+                    {{river.reviews}}
+                    {% endfor %}
                 </div>
-        </div>
+
+            </div>
 </div>
 
 
