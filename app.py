@@ -16,8 +16,8 @@ mongo = PyMongo(app)
 
 ## This is the function for the home page:
 @app.route("/")
-@app.route("/get_river_names")
-def get_river_names():
+@app.route("/get_river_info")
+def get_river_info():
     return render_template("home.html", rivers=mongo.db.river_names.find())
 
 
@@ -27,7 +27,7 @@ def get_river_names():
 
 @app.route("/add_new_river")
 def add_new_river():
-    return render_template("add_river.html", rivers=mongo.db.river_names.find())
+    return render_template("add_river.html")
 
 ## This function adds the form data, on the add_river page, to the database:
 
@@ -49,16 +49,16 @@ def edit_river():
 
 ## This is the function for the leave a review page:
 
-@app.route("/review_river")
-def review_river():
-    return render_template("review.html", rivers=mongo.db.river_names.find())
+@app.route("/leave_review")
+def leave_review():
+    return render_template("leave_review.html", rivers=mongo.db.river_names.find())
 
 
-## This is the function for the river_review page:
+## This is the function for the read_review page:
 
-@app.route("/river_review")
-def river_review():
-    return render_template("river_review.html", rivers=mongo.db.river_names.find_one())
+@app.route("/read_review")
+def read_review():
+    return render_template("read_review.html", rivers=mongo.db.river_names.find_one())
 
 
 
