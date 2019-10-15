@@ -26,7 +26,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto">
                     <a class="nav-item nav-link" href="{{url_for('add_new_river')}}">Add a new River</a>
-                    <a class="nav-item nav-link" href="{{url_for('update_river')}}">Edit River Details</a>
+                    <a class="nav-item nav-link" href="{{url_for('update_river', 'river_id' = river._id)}}">Edit River Details</a>
                     <a class="nav-item nav-link" href="{{url_for('leave_review')}}">Leave a Review</a>
                     <a class="nav-item nav-link" href="{{url_for('read_review')}}">Read Reviews</a>
                 </div>
