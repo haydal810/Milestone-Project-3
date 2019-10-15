@@ -38,9 +38,10 @@ def insert_river():
 
 # This is the function for the edit river page:
 
-@app.route("/edit_river")
-def edit_river():
-    return render_template("edit_river.html", rivers=mongo.db.river_names.find())
+@app.route("/update_river/<river_id>")
+def update_river(river_id):
+    the_river = mongo.db.river_names.find_one({"_id": ObjectId(river_id)})
+    return render_template("update_river.html", river=the_river)
 
 
 # This is the function for the leave a review page:
