@@ -13,23 +13,21 @@ app.config["MONGO_URI"] = os.getenv('MONGO_URI', "Env Not loaded")
 mongo = PyMongo(app)
 
 
-
-## This is the function for the home page:
+# This is the function for the home page:
 @app.route("/")
 @app.route("/get_river_info")
 def get_river_info():
     return render_template("home.html", rivers=mongo.db.river_names.find())
 
 
-
-
-## This is the function for the add_river page:
+# This is the function for the add_river page:
 
 @app.route("/add_new_river")
 def add_new_river():
     return render_template("add_river.html")
 
-## This function adds the form data, on the add_river page, to the database:
+# This function adds the form data, on the add_river page, to the database:
+
 
 @app.route("/insert_river", methods=['POST'])
 def insert_river():
@@ -38,36 +36,29 @@ def insert_river():
     return redirect(url_for('get_river_info'))
 
 
-
-## This is the function for the edit river page:
+# This is the function for the edit river page:
 
 @app.route("/edit_river")
 def edit_river():
     return render_template("edit_river.html", rivers=mongo.db.river_names.find())
 
 
-
-## This is the function for the leave a review page:
+# This is the function for the leave a review page:
 
 @app.route("/leave_review")
 def leave_review():
     return render_template("leave_review.html", rivers=mongo.db.river_names.find())
 
 
-## This is the function for the read_review page:
+# This is the function for the read_review page:
 
 @app.route("/read_review")
 def read_review():
-    return render_template("read_review.html", rivers=mongo.db.river_names.find_one())
+    return render_template("read_review.html",
+                           rivers=mongo.db.river_names.find())
 
 
 if __name__ == '__main__':
-    app.run(host=os.getenv('IP'), 
-    port=int(os.getenv('PORT')), 
-    debug=True)
-
-
-
-
-
-
+    app.run(host=os.getenv('IP'),
+            port=int(os.getenv('PORT')),
+            debug=True)
