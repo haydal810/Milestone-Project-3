@@ -14,7 +14,7 @@ mongo = PyMongo(app)
 
 
 
-## This is the function for the home page:
+## This is the function for the HOME page:
 @app.route("/")
 @app.route("/get_river_names")
 def get_river_names():
