@@ -17,7 +17,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark home-logo-text">
-            <a class="navbar-brand" href="{{url_for('get_river_info')}}"> Rivers of County Kerry <i
+            <a class="navbar-brand" href="{{url_for('get_river_names')}}"> Rivers of County Kerry <i
                     class="fas fa-fish"></i></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,9 +25,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto">
-                    <a class="nav-item nav-link" href="{{url_for('insert_river')}}">Add a new River</a>
-                    <a class="nav-item nav-link" href="{{url_for('update_river', id = river._id)}}">Edit River Details</a>
-                    <a class="nav-item nav-link" href="{{url_for('leave_review')}}">Leave a Review</a>
+                    <a class="nav-item nav-link" href="{{url_for('add_new_river')}}">Add a new River</a>
+                    <a class="nav-item nav-link" href="{{url_for('edit_river')}}">Edit River Details</a>
+                    <a class="nav-item nav-link" href="{{url_for('leave_review_river')}}">Leave a Review</a>
                     <a class="nav-item nav-link" href="{{url_for('read_review')}}">Read Reviews</a>
                 </div>
             </div>

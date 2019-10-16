@@ -6,7 +6,7 @@
     <!–– Welcome Landing text -->
         <div class="row justify-content-center">
             <div class="col-10 text-dark welcome-text">
-                <p><strong>Read Reviews from other users here.</strong></p>
+                <p><strong>Read Reviews <br> from other users<br>here.</strong></p>
             </div>
         </div>
         <!–– River Reviews -->
@@ -14,11 +14,11 @@
             <div class="row justify-content-center">
                 <div class="col-6">
                     {% for river in rivers %}
-                    {{river.reviews}}
-                    {% endfor %}
+                    {{river.river_name}}
                 </div>
                 <div class="col-6">
-                    Test
+                    {{river.reviews}}
+                    {% endfor %}
                 </div>
 
             </div>
