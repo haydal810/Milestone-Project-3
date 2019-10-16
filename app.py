@@ -26,7 +26,7 @@ def get_river_names():
 @app.route("/show_river_doc")
 def show_river_doc():
     return render_template("home.html", river_doc=mongo.db.river_names.find_one({"river_name" : request.form.get('river_name')}))
-
+## Stuck here on above function
 
 
 
