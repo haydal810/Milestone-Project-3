@@ -30,7 +30,7 @@ def insert_river():
     return redirect(url_for('get_river_info'))
 
 
-# This is the function for the edit river page:
+# This is the function for the update river page:
 
 @app.route("/update_river/<river_id>")
 def update_river(river_id):
