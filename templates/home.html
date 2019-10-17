@@ -6,33 +6,38 @@
     <!–– Welcome Landing text -->
         <div class="row justify-content-center">
             <div class="col-10 text-dark welcome-text">
-                <h1><strong>Welcome to the best place to find up to date information on the Rivers of County
+                <h1><strong>Welcome to the Angling Rivers of County
                         Kerry</strong></h1>
-                <p><strong>Begin planning your next fishing trip here.<br> Below are the Rivers on our
-                        Database:</strong>
-                </p>
+                <p><strong>Begin planning your next fishing trip here.</strong></p>
+                <p><strong>Below are the Rivers on our Database:</strong></p>
             </div>
         </div>
+
         <div class="row justify-content-center">
-            {% for river in rivers %}
-            <div class="col-3">
-                <table class="table table-bordered table-hover table-responsive-md">
-                    <thead>
+            <div class="col-12 col-md-8 table-responsive">
+                <table class="table table-hover">
+                    <thead class="thead-dark">
                         <tr>
-                            <th scope="col">River Name:</th>
-                            <th scope="col">River Status:</th>
+                            <th scope="col">River Name</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Angling Methods</th>
+                            <th scope="col">Free fishing / Permit Required</th>
+                            <th scope="col">Fish Species</th>
                         </tr>
                     </thead>
                     <tbody>
+                        {% for river in rivers %}
                         <tr>
-                            <th scope="row">{{river.river_name}}</th>
+                            <td>{{river.river_name}}</td>
                             <td>{{river.status}}</td>
+                            <td>{{river.angling_methods}}</td>
+                            <td>{{river.free_or_permit}}</td>
+                            <td>{{river.fish}}</td>
                         </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
-                <button type="submit" class="btn btn-success marginbottom25">Find out more</button>
             </div>
-            {% endfor %}
         </div>
-</div>
-{% endblock %}
+
+        {% endblock %}

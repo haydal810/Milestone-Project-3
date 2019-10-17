@@ -12,7 +12,6 @@ app.config["MONGO_URI"] = os.getenv('MONGO_URI', "Env Not loaded")
 mongo = PyMongo(app)
 
 
-
 ## HOME page:
 
 @app.route("/")
@@ -20,12 +19,13 @@ mongo = PyMongo(app)
 def get_river_names():
     return render_template("home.html", rivers=mongo.db.river_names.find())
 
-## HOME page function - to show individual document in collection in db...
+## ABOUT page:
 
-@app.route("/show_river_doc")
-def show_river_doc():
-    return render_template("home.html", river_doc=mongo.db.river_names.find_one())
-## Stuck here on above function
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+
 
 
 
