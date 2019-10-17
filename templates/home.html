@@ -12,16 +12,28 @@
         </div>
 
         <div class="row justify-content-center">
-            {% for river in rivers %}
-            <div class="col-12">
-                <p>Database:</p>
-                <P>RIVER NAME: {{river.river_name}}</P>
-                <P>RIVER STATUS: {{river.status}}</P>
-                <P>Fish Species in River: {{river.fish}}</P>
-                <P>Free or Permit required: {{river.free_or_permit}}</P>
-                <P>Angling Methods: {{river.angling_methods}}</P>
+            
+            <div class="col-3">
+                    {% for river in rivers %}
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">River Name:</th>
+                            <th scope="col">River Status:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">{{river.river_name}}</th>
+                            <td>{{river.status}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="submit" class="btn btn-success marginbottom25">Find out more</button>
+                {% endfor %}
             </div>
-            {% endfor %}
+            
         </div>
+
 </div>
 {% endblock %}
