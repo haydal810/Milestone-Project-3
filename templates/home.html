@@ -12,37 +12,16 @@
         </div>
 
         <div class="row justify-content-center">
-            <!–– River database dropdown search -->
-                <div class="col-8 col-md-5">
-                    <form action="" method="POST" class="margintop25 form_font">
-                        <select id="river_name" name="river_name" class="form-control">
-                            <option value="" disabled selected>Select River</option>
-                            {% for river in rivers %}
-                            <option value="{{river.river_name}}">{{river.river_name}}</option>
-                            {% endfor %}
-                        </select>
-                    </form>
-                </div>
-        </div>
-        <!–– River database results -->
-            <div class="row justify-content-center margintop25">
-                <div class="col-12">
-                <h3>Results here:</h3>
-                </div>
-                <div class="col-6">
-                    <p>KEY</p>
-                </div>
-                <div class="col-6">
-                    <p>Value</p>
-                </div>
+            {% for river in rivers %}
+            <div class="col-12">
+                <p>Database:</p>
+                <P>RIVER NAME: {{river.river_name}}</P>
+                <P>RIVER STATUS: {{river.status}}</P>
+                <P>Fish Species in River: {{river.fish}}</P>
+                <P>Free or Permit required: {{river.free_or_permit}}</P>
+                <P>Angling Methods: {{river.angling_methods}}</P>
             </div>
-
+            {% endfor %}
+        </div>
 </div>
-
-
-
-
-
-
-
 {% endblock %}
