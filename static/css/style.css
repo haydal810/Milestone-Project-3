@@ -14,12 +14,11 @@ body {
 }
 
 .home-logo-text {
-    font-family: 'Amatic SC', cursive, sans-serif;
-    font-size: 30px;
+    font-family: 'Mansalva', cursive, sans-serif;
 }
 
 .navbar-brand {
-    font-size: 30px;
+    font-size: 18px;
 }
 
 .welcome-text {

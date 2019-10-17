@@ -6,16 +6,17 @@
     <!–– Welcome Landing text -->
         <div class="row justify-content-center">
             <div class="col-10 text-dark welcome-text">
-                <h1><strong>Welcome to the Angling Rivers of County Kerry, Ireland</strong></h1>
-                <p><strong>Begin planning your next fishing trip here.<br> Search for Rivers below:</strong></p>
+                <h1><strong>Welcome to the best place to find up to date information on the Rivers of County
+                        Kerry</strong></h1>
+                <p><strong>Begin planning your next fishing trip here.<br> Below are the Rivers on our
+                        Database:</strong>
+                </p>
             </div>
         </div>
-
         <div class="row justify-content-center">
-            
+            {% for river in rivers %}
             <div class="col-3">
-                    {% for river in rivers %}
-                <table class="table table-bordered table-hover">
+                <table class="table table-bordered table-hover table-responsive-md">
                     <thead>
                         <tr>
                             <th scope="col">River Name:</th>
@@ -30,10 +31,8 @@
                     </tbody>
                 </table>
                 <button type="submit" class="btn btn-success marginbottom25">Find out more</button>
-                {% endfor %}
             </div>
-            
+            {% endfor %}
         </div>
-
 </div>
 {% endblock %}
