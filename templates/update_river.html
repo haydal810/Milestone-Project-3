@@ -12,28 +12,32 @@
         <div class="row justify-content-center">
             <div class="col-12 col-md-5">
                 <!–– Form fields here -->
-                    <form action="{{url_for('insert_river')}}" method="POST" class="margintop25 form_font">
+                    <form action="{{url_for('edit_river', river_id=river._id) }}" method="POST" class="margintop25 form_font">
                         <div class="form-group font-weight-bolder">
                             <label for="exampleFormControlTextarea1">River Name: </label>
                             <textarea class="form-control" id="river_name" name="river_name" rows="1"
-                                required></textarea>
+                                required>{{river.river_name}}</textarea>
                         </div>
                         <div class="form-group font-weight-bolder">
                             <label for="exampleFormControlSelect1">River Status</label>
                             <select class="form-control" id="status" name="status">
-                                <option value="" disabled selected>Select Status</option>
-                                <option>OPEN</option>
+                                <option value="" selected>{{river.status}}</option>
+                                {% if river.status == "OPEN" %}
                                 <option>CLOSED</option>
+                                {% else %}
+                                <option>OPEN</option>
+                                {% endif %}
                             </select>
                         </div>
                         <div class="form-group font-weight-bolder">
                             <label for="exampleFormControlTextarea1">Fish species: </label>
-                            <textarea class="form-control" id="fish" name="fish" rows="2" required></textarea>
+                            <textarea class="form-control" id="fish" name="fish" rows="2"
+                                required>{{river.fish}}</textarea>
                         </div>
                         <div class="form-group font-weight-bolder">
                             <label for="exampleFormControlSelect1">Free to Fish or Permit Required</label>
                             <select class="form-control" id="free_or_permit" name="free_or_permit">
-                                <option value="" disabled selected>Select Option</option>
+                                <option value="" selected>{{river.free_or_permit}}</option>
                                 <option>Free Fishing</option>
                                 <option>Permit Required</option>
                             </select>
@@ -41,7 +45,7 @@
                         <div class="form-group font-weight-bolder">
                             <label for="exampleFormControlTextarea1">Allowable angling methods: </label>
                             <textarea class="form-control" id="angling_methods" name="angling_methods" rows="2"
-                                required></textarea>
+                                required>{{river.angling_methods}}</textarea>
                         </div>
                         <!–– Send button -->
                             <button type="submit" class="btn btn-success">Submit</button>
