@@ -1,8 +1,7 @@
-body {
+.container-fluid {
     text-align: center;
 }
     
-
 .bg {
     background-image: url(../images/cold-fall-falls-2929245.jpg);
     background-size: cover;
@@ -28,6 +27,7 @@ body {
     margin-top: 50px;
     font-family: 'Amatic SC', cursive, sans-serif;
 }
+
 .welcome-text p {
     font-size: 25px;
 }
@@ -61,4 +61,5 @@ body {
     .table {
         font-size: 9px;
     }
-  }
+}
+
