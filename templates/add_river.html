@@ -17,11 +17,16 @@
                         <form action="{{url_for('insert_river')}}" method="POST" class="margintop25 form_font">
                             <div class="form-group font-weight-bolder">
                                 <label for="exampleFormControlTextarea1">River Name: </label>
-                                <textarea class="form-control" id="river_name" name="river_name" rows="1" required></textarea>
+                                <textarea class="form-control" id="river_name" name="river_name" rows="1"
+                                    required></textarea>
                             </div>
                             <div class="form-group font-weight-bolder">
-                                <label for="exampleFormControlTextarea1">River Status: (Open or Closed)</label>
-                                <textarea class="form-control" id="status" name="status" rows="1" required></textarea>
+                                <label for="exampleFormControlSelect1">River Status</label>
+                                <select class="form-control" id="status" name="status">
+                                    <option value="" disabled selected>Select Status</option>
+                                    <option>OPEN</option>
+                                    <option>CLOSED</option>
+                                </select>
                             </div>
                             <div class="form-group font-weight-bolder">
                                 <label for="exampleFormControlTextarea1">Fish species: </label>
@@ -29,13 +34,13 @@
                             </div>
                             <div class="form-group font-weight-bolder">
                                 <label for="exampleFormControlTextarea1">Free or permit required: </label>
-                                <textarea class="form-control" id="free_or_permit" name="free_or_permit"
-                                    rows="1" required></textarea>
+                                <textarea class="form-control" id="free_or_permit" name="free_or_permit" rows="1"
+                                    required></textarea>
                             </div>
                             <div class="form-group font-weight-bolder">
                                 <label for="exampleFormControlTextarea1">Allowable angling methods: </label>
-                                <textarea class="form-control" id="angling_methods" name="angling_methods"
-                                    rows="2" required></textarea>
+                                <textarea class="form-control" id="angling_methods" name="angling_methods" rows="2"
+                                    required></textarea>
                             </div>
                             <!–– Send button -->
                                 <button type="submit" class="btn btn-success">Submit</button>
