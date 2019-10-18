@@ -25,7 +25,7 @@ def get_river_names():
 def about():
     return render_template("about.html")
 
-## add_river page:
+## ADD_RIVER page:
 
 @app.route("/add_new_river")
 def add_new_river():
@@ -41,11 +41,13 @@ def insert_river():
 
 
 
-## edit river page:
+## UPDATE_RIVER page:
 
-@app.route("/edit_river")
-def edit_river():
-    return render_template("update_river.html", rivers=mongo.db.river_names.find())
+@app.route("/edit_river/<river_id>")
+def edit_river(river_id):
+    the_river = mongo.db.river_names.find_one({"_id": ObjectId(river_id)})
+    return render_template("update_river.html", river=the_river)
+
 
 
 

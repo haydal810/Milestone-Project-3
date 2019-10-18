@@ -28,7 +28,7 @@
                     <tbody>
                         {% for river in rivers %}
                         <tr>
-                            <td>{{river.river_name}}</td>
+                            <td><a class="btn btn-primary btn-sm mybutton" href="{{url_for('edit_river', river_id=river._id)}}" role="button">{{river.river_name}}</a></td>
                             <td>{{river.status}}</td>
                             <td>{{river.angling_methods}}</td>
                             <td>{{river.free_or_permit}}</td>
