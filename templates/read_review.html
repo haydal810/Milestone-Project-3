@@ -10,24 +10,22 @@
             </div>
         </div>
         <!–– River Reviews -->
+            {% for review in reviews %}
             <div class="row justify-content-center margintop25">
                 <div class="col-12 col-md-8 text-dark">
                     <ul class="list-unstyled">
                         <li class="media">
                             <img src="{{ url_for('static', filename='images/user.png') }}" class="mr-3" alt="User">
                             <div class="media-body">
-                                <h5 class="mt-0 mb-1">Review: </h5>
-                                <span>Date of Review: </span>
-                                <p>Review by: </p>
-                                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
-                                    sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-                                    Fusce
-                                    condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in
-                                    faucibus.</p>
+                                <h5 class="mt-0 mb-1">Review: {{review.river_name}}</h5>
+                                <span>Date of Review: {{review.date_of_review}} </span>
+                                <p>Review by: {{review.review_by}} </p>
+                                <p>{{review.review}}</p>
                             </div>
                         </li>
                 </div>
             </div>
+            {% endfor %}
 </div>
 
 

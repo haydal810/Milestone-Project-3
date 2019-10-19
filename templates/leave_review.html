@@ -14,9 +14,13 @@
                 <div class="col-12 col-md-5">
                     <form action="{{url_for('insert_review')}}" method="POST" class="margintop25 form_font">
                         <div class="form-group font-weight-bolder">
-                            <label for="exampleFormControlTextarea1">River Name: </label>
-                            <textarea class="form-control" id="river_name" name="river_name" rows="1"
-                                required></textarea>
+                            <label for="exampleFormControlSelect1">River Name: (Must be in database)</label>
+                            <select class="form-control" id="river_name" name="river_name">
+                                <option value="" disabled selected>Select River</option>
+                                {% for river in rivers %}
+                                <option>{{river.river_name}}</option>
+                                {% endfor %}
+                            </select>
                         </div>
                         <div class="form-group font-weight-bolder">
                             <label for="exampleFormControlTextarea1">Date of Review: (dd-mm-yyyy) </label>
@@ -24,9 +28,12 @@
                                 required></textarea>
                         </div>
                         <div class="form-group font-weight-bolder">
+                            <label for="exampleFormControlTextarea1">Name of Reviewer: </label>
+                            <textarea class="form-control" id="review_by" name="review_by" rows="1" required></textarea>
+                        </div>
+                        <div class="form-group font-weight-bolder">
                             <label for="exampleFormControlTextarea1">User Review: </label>
-                            <textarea class="form-control" id="review" name="review" rows="5"
-                                required></textarea>
+                            <textarea class="form-control" id="review" name="review" rows="5" required></textarea>
                         </div>
                         <!–– Send button -->
                             <button type="submit" class="btn btn-success">Submit</button>

@@ -31,7 +31,7 @@ def about():
 
 @app.route("/add_new_river")
 def add_new_river():
-    return render_template("add_river.html", rivers=mongo.db.river_names.find())
+    return render_template("add_river.html")
 
 # This function POSTs the input data from the user, to the database:
 
@@ -75,14 +75,14 @@ def delete_river(river_id):
 
 @app.route("/leave_review")
 def leave_review():
-    return render_template("leave_review.html")
+    return render_template("leave_review.html", rivers=mongo.db.river_names.find())
 
 
 
 
 # Function to insert User review to DB:
 
-@app.route("/insert_review")
+@app.route("/insert_review", methods=['POST'])
 def insert_review():
     review = mongo.db.river_reviews
     review.insert_one(request.form.to_dict())
@@ -94,7 +94,7 @@ def insert_review():
 
 @app.route("/read_review")
 def read_review():
-    return render_template("read_review.html")
+    return render_template("read_review.html", reviews=mongo.db.river_reviews.find())
 
 
 if __name__ == '__main__':
