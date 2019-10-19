@@ -12,14 +12,14 @@ app.config["MONGO_URI"] = os.getenv('MONGO_URI', "Env Not loaded")
 mongo = PyMongo(app)
 
 
-# HOME page:
+# Function to load HOME page:
 
 @app.route("/")
 @app.route("/get_river_names")
 def get_river_names():
     return render_template("home.html", rivers=mongo.db.river_names.find())
 
-# ABOUT page:
+# Function to load ABOUT page:
 
 
 @app.route("/about")
@@ -41,14 +41,6 @@ def insert_river():
     river = mongo.db.river_names
     river.insert_one(request.form.to_dict())
     return redirect(url_for('get_river_names'))
-
-
-# UPDATE_RIVER page:
-
-@app.route("/edit_river/<river_id>")
-def edit_river(river_id):
-    the_river = mongo.db.river_names.find_one({"_id": ObjectId(river_id)})
-    return render_template("update_river.html", river=the_river)
 
 # UPDATE_RIVER function
 
