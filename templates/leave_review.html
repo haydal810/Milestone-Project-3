@@ -10,22 +10,26 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <!–– Dropdown for River to select for edit -->
+            <!–– Review Form -->
                 <div class="col-12 col-md-5">
-                    <form class="margintop25 form_font">
-                        <select id="river_name" name="river_name" class="form-control" required>
-                            <option value="" disabled selected>Select River</option>
-                            {% for river in rivers %}
-                            <option value="{{river.river_name}}">{{river.river_name}}</option>
-                            {% endfor %}
-                        </select>
-                        <div class=" margintop25 form-group font-weight-bolder">
-                            <label for="exampleFormControlTextarea1"><i class="far fa-comment-dots"></i> Leave your
-                                review here: </label>
-                            <textarea class="form-control" name="reviews" id="reviews" rows="8"
-                                placeholder="Say something nice, will ya?"></textarea>
+                    <form action="{{url_for('insert_review')}}" method="POST" class="margintop25 form_font">
+                        <div class="form-group font-weight-bolder">
+                            <label for="exampleFormControlTextarea1">River Name: </label>
+                            <textarea class="form-control" id="river_name" name="river_name" rows="1"
+                                required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-success">Submit my Review</button>
+                        <div class="form-group font-weight-bolder">
+                            <label for="exampleFormControlTextarea1">Date of Review: </label>
+                            <textarea class="form-control" id="date_of_review" name="date_of_review" rows="1"
+                                required></textarea>
+                        </div>
+                        <div class="form-group font-weight-bolder">
+                            <label for="exampleFormControlTextarea1">User Review: </label>
+                            <textarea class="form-control" id="review" name="review" rows="5"
+                                required></textarea>
+                        </div>
+                        <!–– Send button -->
+                            <button type="submit" class="btn btn-success">Submit</button>
                     </form>
                 </div>
                 <!–– Upvote Option here -->

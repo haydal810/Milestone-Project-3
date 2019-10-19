@@ -74,26 +74,19 @@ def delete_river(river_id):
 # leave a review page: to do yet.
 
 
-@app.route("/leave_review_river")
-def leave_review_river():
-    return render_template("leave_review.html", rivers=mongo.db.river_names.find())
-
+@app.route("/insert_review")
 def insert_review():
     review = mongo.db.river_reviews
     review.insert_one(request.form.to_dict())
     return redirect(url_for('read_review'))
 
 
-# read reviews page:
+
+# Function to load READ REVIEWS page:
 
 @app.route("/read_review")
 def read_review():
     return render_template("read_review.html")
-
-
-
-
-
 
 
 if __name__ == '__main__':
