@@ -50,6 +50,7 @@ def edit_river(river_id):
     the_river = mongo.db.river_names.find_one({"_id": ObjectId(river_id)})
     return render_template("update_river.html", river=the_river)
 
+# UPDATE_RIVER function
 
 @app.route("/update_river/<river_id>", methods=["POST"])
 def update_river(river_id):
@@ -63,7 +64,12 @@ def update_river(river_id):
     })
     return redirect(url_for('get_river_names'))
 
+# delete river record function
 
+@app.route("/delete_river/<river_id>")
+def delete_river(river_id):
+    mongo.db.river_names.remove({'_id': ObjectId(river_id)})
+    return redirect(url_for('get_river_names'))
 
 # leave a review page:
 
