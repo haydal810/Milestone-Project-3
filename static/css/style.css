@@ -62,5 +62,9 @@
         font-size: 9px;
         
     }
+    .table-data {
+        padding-right: 1px;
+        padding-left: 1px;
+    }
 
 }
