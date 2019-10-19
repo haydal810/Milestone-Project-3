@@ -71,8 +71,16 @@ def delete_river(river_id):
     mongo.db.river_names.remove({'_id': ObjectId(river_id)})
     return redirect(url_for('get_river_names'))
 
-# leave a review page: to do yet.
+# Function to load Review a River page:
 
+@app.route("/leave_review")
+def leave_review():
+    return render_template("leave_review.html")
+
+
+
+
+# Function to insert User review to DB:
 
 @app.route("/insert_review")
 def insert_review():
