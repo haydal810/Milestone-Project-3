@@ -22,7 +22,7 @@
                         <div class="form-group font-weight-bolder">
                             <label for="exampleFormControlSelect1">River Status</label>
                             <select class="form-control" id="status" name="status">
-                                <option value="" selected>{{river.status}}</option>
+                                <option value="{{river.status}}" selected>{{river.status}}</option>
                                 {% if river.status == "OPEN" %}
                                 <option>CLOSED</option>
                                 {% else %}
@@ -38,7 +38,7 @@
                         <div class="form-group font-weight-bolder">
                             <label for="exampleFormControlSelect1">Free to Fish or Permit Required</label>
                             <select class="form-control" id="free_or_permit" name="free_or_permit">
-                                <option value="" selected>{{river.free_or_permit}}</option>
+                                <option value="{{river.free_or_permit}}" selected>{{river.free_or_permit}}</option>
                                 {% if river.free_or_permit == "Free Fishing" %}
                                 <option>Permit Required</option>
                                 <option>not applicable</option>
