@@ -83,7 +83,12 @@ def leave_review_river():
 
 @app.route("/read_review")
 def read_review():
-    return render_template("read_review.html", rivers=mongo.db.river_names.find_one())
+    return render_template("read_review.html")
+
+
+
+
+
 
 
 if __name__ == '__main__':

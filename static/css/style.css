@@ -1,11 +1,15 @@
 .container-fluid {
     text-align: center;
 }
+
+.container-fluid_reviews {
+    text-align: left;
+}
     
 .bg {
     background-image: url(../images/cold-fall-falls-2929245.jpg);
     background-size: cover;
-    height: 110vh;
+    height: 100%;
     overflow: hidden;
     position: fixed;
     width: 100%;

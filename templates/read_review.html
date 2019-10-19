@@ -2,24 +2,27 @@
 {% block content %}
 
 
-<div class="container-fluid">
+<div class="container-fluid_reviews">
     <!–– Welcome Landing text -->
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-10 text-dark welcome-text">
-                <p><strong>Read Reviews from other users here.</strong></p>
+                <p><strong>Read Reviews from other users here:</strong></p>
             </div>
         </div>
         <!–– River Reviews -->
-            <div class="row justify-content-center">
-                <div class="col-10 text-dark welcome-text">
+            <div class="row justify-content-center margintop25">
+                <div class="col-12 col-md-8 text-dark">
                     <ul class="list-unstyled">
                         <li class="media">
-                            <img src="url(../images/user.png)" class="mr-3" alt="User">
+                            <img src="{{ url_for('static', filename='images/user.png') }}" class="mr-3" alt="User">
                             <div class="media-body">
-                                <h5 class="mt-0 mb-1">List-based media object</h5>
-                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
-                                sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce
-                                condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                <h5 class="mt-0 mb-1">Review: </h5>
+                                <span>Date of Review: </span>
+                                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+                                    sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                    Fusce
+                                    condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in
+                                    faucibus.</p>
                             </div>
                         </li>
                 </div>
