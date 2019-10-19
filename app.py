@@ -42,7 +42,15 @@ def insert_river():
     river.insert_one(request.form.to_dict())
     return redirect(url_for('get_river_names'))
 
-# UPDATE_RIVER function
+
+# Function to load UPDATE_RIVER page:
+
+@app.route("/edit_river/<river_id>")
+def edit_river(river_id):
+    the_river = mongo.db.river_names.find_one({"_id": ObjectId(river_id)})
+    return render_template("update_river.html", river=the_river)
+
+# UPDATE_RIVER function - This updates a river's info on the db:
 
 @app.route("/update_river/<river_id>", methods=["POST"])
 def update_river(river_id):
@@ -56,19 +64,24 @@ def update_river(river_id):
     })
     return redirect(url_for('get_river_names'))
 
-# delete river record function
+# delete river record function:
 
 @app.route("/delete_river/<river_id>")
 def delete_river(river_id):
     mongo.db.river_names.remove({'_id': ObjectId(river_id)})
     return redirect(url_for('get_river_names'))
 
-# leave a review page:
+# leave a review page: to do yet.
 
 
 @app.route("/leave_review_river")
 def leave_review_river():
     return render_template("leave_review.html", rivers=mongo.db.river_names.find())
+
+def insert_review():
+    review = mongo.db.river_reviews
+    review.insert_one(request.form.to_dict())
+    return redirect(url_for('read_review'))
 
 
 # read reviews page:
