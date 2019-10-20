@@ -18,7 +18,7 @@
                             <select class="form-control" id="river_name" name="river_name">
                                 <option value="" disabled selected>Select River</option>
                                 {% for river in rivers %}
-                                <option>{{river.river_name}}</option>
+                                <option required>{{river.river_name}}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -39,12 +39,6 @@
                             <button type="submit" class="btn btn-success">Submit</button>
                     </form>
                 </div>
-                <!–– Upvote Option here -->
-                    <div class="col-8 welcome-text">
-                        <h3><strong>Would you recommend this river for fishing?</strong></h3>
-                        <p>Submit vote here:</p>
-                        <button type="button" class="btn btn-primary"><i class="far fa-thumbs-up"></i></button>
-                    </div>
         </div>
 </div>
 
