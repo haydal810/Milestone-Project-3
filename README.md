@@ -1,4 +1,4 @@
-This is the 3rd Milestone Project for Code Institute - A simple database web application for Fishing Enthusiasts (Anglers).
+This is the 3rd Milestone Project for Code Institute - A database web application for Fishing Enthusiasts (Anglers).
 
 
 # Rivers of County Kerry
@@ -46,6 +46,7 @@ Two fonts used are a google fonts, called "Mansalvua" and "Amatic SC". They are 
 * Authentication would be a nice feature to implement, as it would ensure data that is added is more authentic and less inclined to be spam.
 * Add additional fields to the river_names database, such a location, additonal info regarding purchase of permits, and links to accomidations / fishing tackle shops, etc.
 * A "fish caught" record, to display anglers achievements on particular rivers.
+* A graphical representation of the most popular rivers, as voted by visitors to the application.
 
 ## Main Technologies Used
 
@@ -71,7 +72,7 @@ Two fonts used are a google fonts, called "Mansalvua" and "Amatic SC". They are 
 
 ### User Testing
 
-Manual User testing - TBA... INSERT MORE INFO HERE...
+Manual User testing - TBA... NEED TO FINISH THIS OFF ON MONDAY! 
 
 ### Below are the list of Internet Browsers I used to test the display of the website:
 
@@ -81,7 +82,7 @@ Manual User testing - TBA... INSERT MORE INFO HERE...
 3. Microsoft Edge (Version 44.1)
 4. Internet Explorer 11 (Version 11.8)
 
-I tested the web application on the above web browsers. TBA TBA
+NEED TO FINISH THIS OFF ON MONDAY! 
 
 ### Below are the list of websites I used to test the HTML, CSS and JS code:
 
@@ -93,7 +94,7 @@ I tested the web application on the above web browsers. TBA TBA
 
 #### As a new User to the web application, I want to be able to understand how to navigate around the web application.
 
-Info HERE
+NEED TO FINISH THIS OFF ON MONDAY! 
 
 #### As a new User to the web application, I want to be able to add additional information to the river database...
 
@@ -119,8 +120,9 @@ Info HERE
 ### Local Deployment
 
 This project was developed using the Visual Studio Code IDE, committed to git and pushed to GitHub using the built in function within Visual Studio Code.
-The code was also pushed from git to heroku for live deployment: https://www.heroku.com/ 
-The GitHub Repository is here: https://haydal810.github.io/Milestone-Project-2/
+
+
+The GitHub Repository is here: https://github.com/haydal810/Milestone-Project-3
 The application is live here: https://kerry-rivers-ms3.herokuapp.com/
 
 To deploy this project on your own IDE, folow the steps below:
@@ -131,6 +133,7 @@ To deploy this project on your own IDE, folow the steps below:
             - git
             - PIP
             - Python 3
+            - Flask
             - A MongoDB Atlas account
 
 Instructions for Installation:
@@ -138,24 +141,68 @@ Instructions for Installation:
 1.  Make your own folder and navigate to it on the terminal. Then enter the following in the terminal:
 
 ```
-git clone https://github.com/haydal810/Milestone-Project-3.git
-pip install --upgrade pip
-pip install -r requirements.txt
+$ git clone https://github.com/haydal810/Milestone-Project-3.git
+$ pip install --upgrade pip
+$ pip install -r requirements.txt
 ```
 2.  To run the app locally:
 
 ```
-python -m flask run
+$ python -m flask run
 ```
 
 ### Heroku Deployment
 
+The code was also pushed from git to heroku for live deployment: https://www.heroku.com/ 
+
+To Deploy using Heroku Git, use git in the command line:
+
+1.  Install the Heroku CLI. If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
+
 ```
-heroku login
-heroku apps:create my-app-name
-git push -u heroku master
-heroku ps:scale web=1
+$ heroku login
 ```
+
+2.  Clone the repository. Use Git to clone the projects source code to your local machine.
+
+```
+$ heroku git:clone -a kerry-rivers-ms3
+$ cd kerry-rivers-ms3
+```
+3.  create your requirements.txt file
+
+```
+$ pip freeze --local > requirements.txt
+
+```
+4.  create your procfile file
+
+```
+$ echo web: python app.py > Procfile
+
+```
+
+5.  Deploy your changes. Make some changes to the code you just cloned and deploy them to Heroku using Git.
+
+```
+$ git add .
+$ git commit -am "commit message"
+$ git push heroku master
+```
+6.  In the heroku dashboard for the application, click on "Settings" > "Reveal Config Vars".
+
+7.  Set the following config vars:
+
+```
+IP : 0.0.0.0
+PORT: 5000
+MONGO_URI: mongodb+srv://<username>:<password>@<cluster_name>-qtxun.mongodb.net/<database_name>?retryWrites=true&w=majority
+```
+To get your MONGO_URI read the MongoDB Atlas documentation: [HERE](https://docs.atlas.mongodb.com/)
+
+8. In the heroku dashboard, click on the button "Open App".
+
+The app should open in a new tab.
 
 ## Credits
 
