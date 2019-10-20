@@ -88,7 +88,6 @@ I tested the web application on the above web browsers. TBA TBA
 1. [W3C HTML Validator](https://validator.w3.org/) This is a HTML online validitor.
 2. [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) This is a CSS online validitor.
 3. [CSS Lint](http://csslint.net/) CSS Lint is an open source CSS code quality tool I used.
-4. [JS Lint](https://www.jslint.com/)
 
 #### Meeting the needs of the user stories (as described in the UX section of this README file)
 
