@@ -35,7 +35,7 @@
                 <tbody>
                     {% for river in rivers %}
                     <tr>
-                        <td><a class="btn btn-primary btn-sm mybutton"
+                        <td><a class="btn btn-primary btn-sm"
                                 href="{{url_for('edit_river', river_id=river._id)}}"
                                 role="button">{{river.river_name}}</a></td>
                         <td>{{river.status}}</td>

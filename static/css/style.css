@@ -44,12 +44,12 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.margintop25 {
+.row-form {
     margin-top: 25px;
 }
 
-.marginbottom25 {
-    margin-bottom: 25px;
+.delete-record-advice {
+    margin-top: 25px;
 }
 
 .form_font {

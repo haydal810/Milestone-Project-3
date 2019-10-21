@@ -8,10 +8,10 @@
             <h1><strong>Update River's details here:</strong></h1>
         </div>
     </div>
-    <div class="row justify-content-center">
+    <div class="row row-form justify-content-center">
         <div class="col-12 col-md-5">
             <!-- Form fields here -->
-            <form action="{{url_for('update_river', river_id=river._id) }}" method="POST" class="margintop25 form_font">
+            <form action="{{url_for('update_river', river_id=river._id) }}" method="POST" class="form_font">
                 <div class="form-group font-weight-bolder">
                     <label for="river_name">River Name: </label>
                     <textarea class="form-control" id="river_name" name="river_name" rows="1"
@@ -56,7 +56,7 @@
                 <!-- Send button -->
                 <button type="submit" class="btn btn-success">Submit</button>
             </form>
-            <p class="margintop25"><strong>Or delete this record here:</strong></p>
+            <p class="delete-record-advice"><strong>Or delete this record here:</strong></p>
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Modal">
                 Delete Record

@@ -8,10 +8,10 @@
             <p><strong>Want to provide feedback <br> on a river?<br>Leave your review here.</strong></p>
         </div>
     </div>
-    <div class="row justify-content-center">
+    <div class="row row-form justify-content-center">
         <!-- Review Form -->
         <div class="col-12 col-md-5">
-            <form action="{{url_for('insert_review')}}" method="POST" class="margintop25 form_font">
+            <form action="{{url_for('insert_review')}}" method="POST" class="form_font">
                 <div class="form-group font-weight-bolder">
                     <label for="river_name">River Name: (Must be in database)</label>
                     <select class="form-control" id="river_name" name="river_name">
