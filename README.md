@@ -47,6 +47,7 @@ Two fonts used are a google fonts, called "Mansalvua" and "Amatic SC". They are 
 * Add additional fields to the river_names database, such a location, additonal info regarding purchase of permits, and links to accomidations / fishing tackle shops, etc.
 * A "fish caught" record, to display anglers achievements on particular rivers.
 * A graphical representation of the most popular rivers, as voted by visitors to the application.
+* A .sort() applied to the route functions in app.py, so that displayed results show the most recently added at the top of the table (rivers & reviews)
 
 ## Main Technologies Used
 
