@@ -2,20 +2,23 @@
 {% block content %}
 
 <div class="container-fluid">
-    <!–– Welcome Landing text -->
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8">
-                <div class="jumbotron">
-                    <h1 class="display-4">About</h1>
-                    <p class="lead">A River Database, designed by anglers, for anglers. If you are new
-                        to the area of County Kerry, or live in the Kingdom, this is the place to come to find the latest
-                        information about the local fishing rivers in Kerry.</p>
-                    <hr class="my-4">
-                    <p>Please explore this web application and feel free to leave a review on a particular river that you visited. Please note, that the river you want to review must have a record in our database, so if no record exists, please add that particular river to our database.</p>
-                    <a class="btn btn-success btn-lg mybutton" href="{{url_for('get_river_names')}}" role="button">Get Started</a>
-                </div>
+    <!-- Welcome Landing text -->
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8">
+            <div class="jumbotron">
+                <h1 class="display-4">About</h1>
+                <p class="lead">A River Database, designed by anglers, for anglers. If you are new
+                    to the area of County Kerry, or live in the Kingdom, this is the place to come to find the latest
+                    information about the local fishing rivers in Kerry.</p>
+                <hr class="my-4">
+                <p>Please explore this web application and feel free to leave a review on a particular river that you
+                    visited. Please note, that the river you want to review must have a record in our database, so if no
+                    record exists, please add that particular river to our database.</p>
+                <a class="btn btn-success btn-lg mybutton" href="{{url_for('get_river_names')}}" role="button">Get
+                    Started</a>
             </div>
         </div>
+    </div>
 </div>
 
 {% endblock %}

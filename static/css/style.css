@@ -1,6 +1,10 @@
+/* --All container-fluids to have center align-- */
+
 .container-fluid {
     text-align: center;
 }
+
+/* --Review container-fluid to have left align-- */
 
 .container-fluid_reviews {
     text-align: left;
@@ -70,4 +74,20 @@
         padding-right: 1px;
         padding-left: 1px;
     }
+}
+
+/* --Easier read-ability, rows given white background-- */
+
+.row-review {
+    margin-top: 25px;
+    background-color: rgba(245, 246, 250,1.0);
+}
+
+.row-welcome {
+    margin-top: 20px;
+    background-color: rgba(245, 246, 250,1.0);
+}
+
+.table {
+    background-color: rgba(245, 246, 250,1.0);
 }

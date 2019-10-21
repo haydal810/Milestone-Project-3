@@ -2,91 +2,89 @@
 {% block content %}
 
 <div class="container-fluid">
-    <!–– Welcome Landing text -->
-        <div class="row justify-content-center">
-            <div class="col-10 text-dark welcome-text">
-                <h1><strong>Update River's details here:</strong></h1>
-            </div>
+    <!-- Welcome Landing text -->
+    <div class="row justify-content-center">
+        <div class="col-10 text-dark welcome-text">
+            <h1><strong>Update River's details here:</strong></h1>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-5">
-                <!–– Form fields here -->
-                    <form action="{{url_for('update_river', river_id=river._id) }}" method="POST"
-                        class="margintop25 form_font">
-                        <div class="form-group font-weight-bolder">
-                            <label for="exampleFormControlTextarea1">River Name: </label>
-                            <textarea class="form-control" id="river_name" name="river_name" rows="1"
-                                required>{{river.river_name}}</textarea>
-                        </div>
-                        <div class="form-group font-weight-bolder">
-                            <label for="exampleFormControlSelect1">River Status</label>
-                            <select class="form-control" id="status" name="status">
-                                <option value="{{river.status}}" selected>{{river.status}}</option>
-                                {% if river.status == "OPEN" %}
-                                <option>CLOSED</option>
-                                {% else %}
-                                <option>OPEN</option>
-                                {% endif %}
-                            </select>
-                        </div>
-                        <div class="form-group font-weight-bolder">
-                            <label for="exampleFormControlTextarea1">Fish species: </label>
-                            <textarea class="form-control" id="fish" name="fish" rows="2"
-                                required>{{river.fish}}</textarea>
-                        </div>
-                        <div class="form-group font-weight-bolder">
-                            <label for="exampleFormControlSelect1">Free to Fish or Permit Required</label>
-                            <select class="form-control" id="free_or_permit" name="free_or_permit">
-                                <option value="{{river.free_or_permit}}" selected>{{river.free_or_permit}}</option>
-                                {% if river.free_or_permit == "Free Fishing" %}
-                                <option>Permit Required</option>
-                                <option>not applicable</option>
-                                {% elif river.free_or_permit == "Permit Required"  %}
-                                <option>Free Fishing</option>
-                                <option>not applicable</option>
-                                {% elif river.free_or_permit == "not applicable"  %}
-                                <option>Permit Required</option>
-                                <option>Free Fishing</option>
-                                {% endif %}
-                            </select>
-                        </div>
-                        <div class="form-group font-weight-bolder">
-                            <label for="exampleFormControlTextarea1">Allowable angling methods: </label>
-                            <textarea class="form-control" id="angling_methods" name="angling_methods" rows="2"
-                                required>{{river.angling_methods}}</textarea>
-                        </div>
-                        <!–– Send button -->
-                            <button type="submit" class="btn btn-success">Submit</button>
-                    </form>
-                    <p class="margintop25"><strong>Or delete this record here:</strong></p>
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Modal">
-                        Delete Record
-                    </button>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-5">
+            <!-- Form fields here -->
+            <form action="{{url_for('update_river', river_id=river._id) }}" method="POST" class="margintop25 form_font">
+                <div class="form-group font-weight-bolder">
+                    <label for="river_name">River Name: </label>
+                    <textarea class="form-control" id="river_name" name="river_name" rows="1"
+                        required>{{river.river_name}}</textarea>
+                </div>
+                <div class="form-group font-weight-bolder">
+                    <label for="status">River Status</label>
+                    <select class="form-control" id="status" name="status">
+                        <option value="{{river.status}}" selected>{{river.status}}</option>
+                        {% if river.status == "OPEN" %}
+                        <option>CLOSED</option>
+                        {% else %}
+                        <option>OPEN</option>
+                        {% endif %}
+                    </select>
+                </div>
+                <div class="form-group font-weight-bolder">
+                    <label for="fish">Fish species: </label>
+                    <textarea class="form-control" id="fish" name="fish" rows="2" required>{{river.fish}}</textarea>
+                </div>
+                <div class="form-group font-weight-bolder">
+                    <label for="free_or_permit">Free to Fish or Permit Required</label>
+                    <select class="form-control" id="free_or_permit" name="free_or_permit">
+                        <option value="{{river.free_or_permit}}" selected>{{river.free_or_permit}}</option>
+                        {% if river.free_or_permit == "Free Fishing" %}
+                        <option>Permit Required</option>
+                        <option>not applicable</option>
+                        {% elif river.free_or_permit == "Permit Required"  %}
+                        <option>Free Fishing</option>
+                        <option>not applicable</option>
+                        {% elif river.free_or_permit == "not applicable"  %}
+                        <option>Permit Required</option>
+                        <option>Free Fishing</option>
+                        {% endif %}
+                    </select>
+                </div>
+                <div class="form-group font-weight-bolder">
+                    <label for="angling_methods">Allowable angling methods: </label>
+                    <textarea class="form-control" id="angling_methods" name="angling_methods" rows="2"
+                        required>{{river.angling_methods}}</textarea>
+                </div>
+                <!-- Send button -->
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+            <p class="margintop25"><strong>Or delete this record here:</strong></p>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Modal">
+                Delete Record
+            </button>
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Message for User</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">Are you sure you want to delete this information record?</div>
-                                <div class="modal-footer">
-                                    <a href="{{url_for('get_river_names')}}" type="button" class="btn btn-secondary">No,
-                                        take me back!</a>
-                                    <a href="{{url_for('delete_river', river_id=river._id) }}" type="button"
-                                        class="btn btn-danger">Yes, Delete Record</a>
-                                </div>
-                            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="message_modal"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="message_modal">Message for User</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">Are you sure you want to delete this information record?</div>
+                        <div class="modal-footer">
+                            <a href="{{url_for('get_river_names')}}" type="button" class="btn btn-secondary">No,
+                                take me back!</a>
+                            <a href="{{url_for('delete_river', river_id=river._id) }}" type="button"
+                                class="btn btn-danger">Yes, Delete Record</a>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
+    </div>
 </div>
 
 {% endblock %}

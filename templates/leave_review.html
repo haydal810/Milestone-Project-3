@@ -2,43 +2,42 @@
 {% block content %}
 
 <div class="container-fluid">
-    <!–– Welcome Landing text -->
-        <div class="row justify-content-center">
-            <div class="col-10 text-dark welcome-text">
-                <p><strong>Want to provide feedback <br> on a river?<br>Leave your review here.</strong></p>
-            </div>
+    <!-- Welcome Landing text -->
+    <div class="row justify-content-center">
+        <div class="col-10 text-dark welcome-text">
+            <p><strong>Want to provide feedback <br> on a river?<br>Leave your review here.</strong></p>
         </div>
-        <div class="row justify-content-center">
-            <!–– Review Form -->
-                <div class="col-12 col-md-5">
-                    <form action="{{url_for('insert_review')}}" method="POST" class="margintop25 form_font">
-                        <div class="form-group font-weight-bolder">
-                            <label for="exampleFormControlSelect1">River Name: (Must be in database)</label>
-                            <select class="form-control" id="river_name" name="river_name">
-                                <option value="" disabled selected>Select River</option>
-                                {% for river in rivers %}
-                                <option required>{{river.river_name}}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                        <div class="form-group font-weight-bolder">
-                            <label for="exampleFormControlTextarea1">Date of Review: </label>
-                            <input type="date" class="form-control" id="date_of_review" name="date_of_review" rows="1"
-                                required>
-                        </div>
-                        <div class="form-group font-weight-bolder">
-                            <label for="exampleFormControlTextarea1">Name of Reviewer: </label>
-                            <textarea class="form-control" id="review_by" name="review_by" rows="1" required></textarea>
-                        </div>
-                        <div class="form-group font-weight-bolder">
-                            <label for="exampleFormControlTextarea1">User Review: </label>
-                            <textarea class="form-control" id="review" name="review" rows="5" required></textarea>
-                        </div>
-                        <!–– Send button -->
-                            <button type="submit" class="btn btn-success">Submit</button>
-                    </form>
+    </div>
+    <div class="row justify-content-center">
+        <!-- Review Form -->
+        <div class="col-12 col-md-5">
+            <form action="{{url_for('insert_review')}}" method="POST" class="margintop25 form_font">
+                <div class="form-group font-weight-bolder">
+                    <label for="river_name">River Name: (Must be in database)</label>
+                    <select class="form-control" id="river_name" name="river_name">
+                        <option value="" disabled selected>Select River</option>
+                        {% for river in rivers %}
+                        <option required>{{river.river_name}}</option>
+                        {% endfor %}
+                    </select>
                 </div>
+                <div class="form-group font-weight-bolder">
+                    <label for="date_of_review">Date of Review: </label>
+                    <input type="date" class="form-control" id="date_of_review" name="date_of_review" rows="1" required>
+                </div>
+                <div class="form-group font-weight-bolder">
+                    <label for="review_by">Name of Reviewer: </label>
+                    <textarea class="form-control" id="review_by" name="review_by" rows="1" required></textarea>
+                </div>
+                <div class="form-group font-weight-bolder">
+                    <label for="review">User Review: </label>
+                    <textarea class="form-control" id="review" name="review" rows="5" required></textarea>
+                </div>
+                <!-- Send button -->
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
         </div>
+    </div>
 </div>
 
 {% endblock %}

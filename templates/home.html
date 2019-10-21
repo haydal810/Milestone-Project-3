@@ -2,51 +2,51 @@
 {% block content %}
 
 <div class="container-fluid">
-    <!–– Welcome Landing text -->
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-6 text-dark">
-                <div class="jumbotron">
-                    <h1 class="display-4">Welcome</h1>
-                    <p class="lead">This is a simple web application, designed by anglers, for anglers. If you are new
-                        to the area of County Kerry, or live in the Kingdom, this is the place to come to find the
-                        latest information about the local fishing rivers in Kerry.</p>
-                    <hr class="my-4">
-                    <p>Visitors to this web application can create, read, update and delete (CRUD) river records. Feel
-                        free to leave feedback on a particular river, so that other anglers and the relevant authorities
-                        (IFI, angling clubs, etc) can be best informed of the latest information. Click on the <button
-                            type="button" class="btn btn-primary btn-sm">Blue Button</button> to
-                        edit/update/delete a rivers Record</p>
-                </div>
+    <!-- Welcome Landing text -->
+    <div class="row-welcome justify-content-center">
+        <div class="col-12 text-dark">
+            <div class="jumbotron">
+                <h1 class="display-4">Welcome</h1>
+                <p class="lead">This is a simple web application, designed by anglers, for anglers. If you are new
+                    to the area of County Kerry, or live in the Kingdom, this is the place to come to find the
+                    latest information about the local fishing rivers in Kerry.</p>
+                <hr class="my-4">
+                <p>Visitors to this web application can create, read, update and delete (CRUD) river records. Feel
+                    free to leave feedback on a particular river, so that other anglers and the relevant authorities
+                    (IFI, angling clubs, etc) can be best informed of the latest information. Click on the <button
+                        type="button" class="btn btn-primary btn-sm">Blue Button</button> to
+                    edit/update/delete a rivers Record</p>
             </div>
         </div>
-        <!–– Table of River Data -->
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-8 table-responsive table-data">
-                    <table class="table table-hover">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th scope="col">River Name</th>
-                                <th scope="col">Status</th>
-                                <th scope="col">Angling Methods</th>
-                                <th scope="col">Free fishing / Permit Required</th>
-                                <th scope="col">Fish Species</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for river in rivers %}
-                            <tr>
-                                <td><a class="btn btn-primary btn-sm mybutton"
-                                        href="{{url_for('edit_river', river_id=river._id)}}"
-                                        role="button">{{river.river_name}}</a></td>
-                                <td>{{river.status}}</td>
-                                <td>{{river.angling_methods}}</td>
-                                <td>{{river.free_or_permit}}</td>
-                                <td>{{river.fish}}</td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+    </div>
+    <!-- Table of River Data -->
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 table-responsive table-data">
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">River Name</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Angling Methods</th>
+                        <th scope="col">Free fishing / Permit Required</th>
+                        <th scope="col">Fish Species</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for river in rivers %}
+                    <tr>
+                        <td><a class="btn btn-primary btn-sm mybutton"
+                                href="{{url_for('edit_river', river_id=river._id)}}"
+                                role="button">{{river.river_name}}</a></td>
+                        <td>{{river.status}}</td>
+                        <td>{{river.angling_methods}}</td>
+                        <td>{{river.free_or_permit}}</td>
+                        <td>{{river.fish}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 
-{% endblock %}
+    {% endblock %}

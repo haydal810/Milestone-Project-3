@@ -3,23 +3,23 @@
 
 <div class="container-fluid_reviews">
     <!–– Welcome Landing text -->
-        <div class="row justify-content-center">
+        <div class="row">
             <div class="col-10 text-dark welcome-text">
                 <p><strong>Read Reviews from other users here:</strong></p>
             </div>
         </div>
         <!–– River Reviews -->
             {% for review in reviews %}
-            <div class="row justify-content-center margintop25">
-                <div class="col-12 col-md-8 text-dark">
+            <div class="row-review justify-content-center">
+                <div class="col-12 text-dark">
                     <ul class="list-unstyled">
                         <li class="media">
                             <img src="{{ url_for('static', filename='images/user.png') }}" class="mr-3" alt="User">
                             <div class="media-body">
-                                <h5 class="mt-0 mb-1">Review: {{review.river_name}}</h5>
+                                <h6 class="mt-0 mb-1">Review Reviewed: {{review.river_name}}</h5>
                                 <span>Date of Review: {{review.date_of_review}} </span>
                                 <p>Review by: {{review.review_by}} </p>
-                                <p class="font-weight-bolder">{{review.review}}</p>
+                                <p>{{review.review}}</p>
                             </div>
                         </li>
                 </div>
