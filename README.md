@@ -51,7 +51,7 @@ Two fonts used are a google fonts, called "Mansalvua" and "Amatic SC". They are 
 
 ## Main Technologies Used
 
-* This project uses Python, HTML, CSS and Javascript programming languages. 
+* This project uses Python, HTML, CSS and Javascript programming languages. -
 
 ### Tools used
 
