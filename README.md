@@ -51,7 +51,7 @@ Two fonts used are a google fonts, called "Mansalvua" and "Amatic SC". They are 
 
 ## Main Technologies Used
 
-* This project uses Python, HTML, CSS and Javascript programming languages. -
+* This project uses Python, HTML, CSS and Javascript programming languages. 
 
 ### Tools used
 
@@ -77,7 +77,7 @@ Two fonts used are a google fonts, called "Mansalvua" and "Amatic SC". They are 
 This was the primary method of testing the application. People were asked to visit the website on a variety of devices, and to enter information to the database. This feedback was very uselful to determine any bugs that may have been present. I also tested the app manually myself on a varietly of browsers. 
 
 
-### Below are the list of Internet Browsers I used to test the display of the website:
+### Below are the list of Internet Browsers that were used to test the display of the website:
 
 1. Google Chrome (Version 77.0)
     * Chrome Lighthouse was used to audit the website.
