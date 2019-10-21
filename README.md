@@ -11,7 +11,7 @@ This web application has been designed for local and visiting Fishing Enthusiast
 
 ### User Stories:
 As a new User to the web application, I want to:
-
+* be able to understand how to navigate around the web application.
 * be able to find information about a particular river in County Kerry.
 * to be able to update a particular river's information if I believe it to be inaccurate, incorrect or outdated.
 * leave a review about a particular river, which is both informative and allows me to broadcast my own opinion.
@@ -54,7 +54,7 @@ Two fonts used are a google fonts, called "Mansalvua" and "Amatic SC". They are 
 
 ### Tools used
 
-* Visual Studio Code by Microsoft - This was used as the IDE for building the application. 
+* Visual Studio Code by Microsoft - This was used as the IDE for building the application. This was my first time using a local IDE. 
 * GitHub to store the project code remotely.
 * PIP for installation of tools needed in this project.
 * Git to handle version control.
@@ -72,7 +72,9 @@ Two fonts used are a google fonts, called "Mansalvua" and "Amatic SC". They are 
 
 ### User Testing
 
-Manual User testing - TBA... NEED TO FINISH THIS OFF ON MONDAY! 
+#### Manual User testing:
+This was the primary method of testing the application. People were asked to visit the website on a variety of devices, and to enter information to the database. This feedback was very uselful to determine any bugs that may have been present. I also tested the app manually myself on a varietly of browsers. 
+
 
 ### Below are the list of Internet Browsers I used to test the display of the website:
 
@@ -82,7 +84,7 @@ Manual User testing - TBA... NEED TO FINISH THIS OFF ON MONDAY!
 3. Microsoft Edge (Version 44.1)
 4. Internet Explorer 11 (Version 11.8)
 
-NEED TO FINISH THIS OFF ON MONDAY! 
+Manual testing was carried out using the above browsers. No bugs or desplay issues could be identified. 
 
 ### Below are the list of websites I used to test the HTML, CSS and JS code:
 
@@ -94,25 +96,20 @@ NEED TO FINISH THIS OFF ON MONDAY!
 
 #### As a new User to the web application, I want to be able to understand how to navigate around the web application.
 
-NEED TO FINISH THIS OFF ON MONDAY! 
+Upon landing on the home page, the user is greeted with a jumbotron welcome text, imediately followed below by the subject of the application: The Data Table. The user doesn't have to go searching for it, as it's right there. Navigation comes from the Navigation Bar at the top of the page. The Logo, when clicked, will redirect the user back to the home page. The rest of the Nav Bar items are positioned on the right hand side. They visually tell the user exactly what they can do. Each item, when clicked, redirects the user to a seperate page where the desired action can occur.
 
 #### As a new User to the web application, I want to be able to add additional information to the river database...
 
-Info HERE
+Under "Add a new River" on the Nav Bar, the user will be redirected to a new page where the user can add a new document to the collection in the database.
 
 
-#### As a new User to the web application, I want to be able to review a particular river on the river database...
+#### As a new User to the web application, I want to be able to update a particular river's information if I believe it to be inaccurate, incorrect or outdated.
 
-Info HERE
+On the data-table displayed on the home page, there is a blue button in the first row. As explained on the welcome message on the top of the home page, when this button is clicked for that particular river, the user is redirected to a new page, where a pre-polulated form is, and the user can edit and make changes to this river record. At this point, there is also an option to delete the document entirely from the collection, in the form of a red button at the bottom of the form.
 
-#### As a new User to the web application, I want to be able to review a particular river on the river database...
+#### As a new User to the web application, I want to leave a review about a particular river, which is both informative and allows me to broadcast my own opinion.
 
-Info HERE
-
-#### As a new User to the web application, I want to be able to review a particular river on the river database...
-
-Info HERE
-
+"Review a River" is an item on the Nav Bar. Once clicked, the user is brought to a new page, where, via a form, they can leave a review about a particular river in the database. Once the review is submitted, the user can view what they have posted to the database on the "Read Reviews" page. Other users can also view this page, providing insight and knowledge from other users.
 
 
 ## Deployment
